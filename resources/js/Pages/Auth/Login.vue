@@ -69,11 +69,8 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
-            <div class="block mt-4">
-                <label class="flex items-center">
-                    <Checkbox name="remember" v-model:checked="form.remember" />
-                    <span class="ms-2 text-sm text-gray-600">Remember me</span>
-                </label>
+            <div class="text-xs pt-4">
+                By signing in you agree to Easycart's Terms and Conditions.
             </div>
 
             <div class="flex items-center justify-end mt-4">

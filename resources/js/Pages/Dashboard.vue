@@ -1,6 +1,6 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
@@ -11,9 +11,9 @@ import 'vue3-carousel/dist/carousel.css'
 
     <AuthenticatedLayout>
         <Carousel :items-to-show="1" :wrap-around="true">
-            <Slide v-for="slide in 10" :key="slide">
+            <Slide v-for="slide in 6" :key="slide">
               <div class="carousel__item">
-                <img src="https://via.placeholder.com/3000x1200.png/004466?text=Testing" alt="">
+                <img :src="'/images/carousel/slide' + slide + '.jpg'" alt="" class="w-full h-auto">
               </div>
             </Slide>
         
@@ -31,16 +31,16 @@ import 'vue3-carousel/dist/carousel.css'
             </div>
 
             <div class="grid grid-cols-3 m-4 z-10 relative">
-                <div class="p-1.5 flex">
-                    <div class="bg-white p-5">
-                        <div class="text-2xl font-extrabold flex">Computers</div>
-                        <div class="flex">
-                            <img class="object-fill" src="https://via.placeholder.com/1097x756" alt="">
-                        </div>
-                        <div class="pt-3 -mb-2 text-teal-800 font-bold hover:underline hover:text-red-400 cursor-pointer">
-                            See More
-                        </div>
-                    </div>
+                <div class="p-1.5 flex" v-for="cat in $page.props.categories" :key="cat">
+                        <Link :href="route('category.index', { id: cat.id })" class="bg-white p-5">
+                            <div class="text-2xl font-extrabold flex">{{ cat.name }}</div>
+                            <div class="flex">
+                                <img class="object-fill" :src="`images/categories/${cat.id}.png`" alt="">
+                            </div>
+                            <div class="pt-3 -mb-2 text-teal-800 font-bold hover:underline hover:text-red-400 cursor-pointer">
+                                See More
+                            </div>
+                        </Link>
                 </div>
             </div>
         </div>

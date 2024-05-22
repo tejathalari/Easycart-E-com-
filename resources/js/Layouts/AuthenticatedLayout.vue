@@ -4,13 +4,11 @@
         <div v-if="accountAndList" class="top-0 z-20 fixed w-full h-full bg-black bg-opacity-70"></div>
         <div class="flex items-center bg-gray-900 h-[60px] py-2 min-w-[1150px] w-full">
             <div class="flex">
-                <Link class="text-white h-[50px] p-3 pt-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
-                    Easycart
+                <Link class="text-white h-[50px] p-3 pt-0.5 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                    <img width="50" height="50" src="/images/logo/Easycart.png" >
                 </Link>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-white w-6 h-6 mt-3.5 mr-1">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                  </svg>
             </div>
+            
 
             <div class="text-white h-[50px] p-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
                 <div class="flex items-center justify-center">
@@ -41,13 +39,13 @@
             </div>
 
             <div class="flex">
-                <div class="h-[50px] p-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
-                    <div class="flex items-center justify-center mt-2.5 px-1">
-                        <img src="https://via.placeholder.com/35x20" alt="">
-                        <div class="text-[15px] text-white -mt-2 -mr-0.5 font-extrabold">EN</div>
-                        <MenuDownIcon fill="#c2c2c2" :size="20" class="text-white -mr-4 -mt-1.5 pr-1" />
+                <div class="h-[50px] p-3 border-[1px] border-gray-900 rounded-sm hover:border-gray-100 cursor-pointer">
+                    <div class="flex items-center justify-center mt-1 px-1">
+                        <img class="mb-0 mr-1 w-6 h-auto" src="/images/flags/US.png" alt="">
+                        <div class="text-[15px] text-white font-extrabold">EN</div>
+                        <MenuDownIcon fill="#c2c2c2" :size="20" class="text-white ml-1 pr-1" />
                     </div>
-                </div>
+            </div>
 
                 <div @mouseenter="accountAndListFunc(true)" @mouseleave="accountAndListFunc(false)" class="h-[50px] p-3 pt-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
                     <div class="flex items-center justify-center">
@@ -163,20 +161,22 @@
             <slot />
         </main>
 
-        <div class="w-full bg-white mt-10">
+        <div class="w-full bg-white mt-10 overflow-x-scroll">
             <div class="max-w-[1500px] mx-auto">
                 <div class="text-[23px] pt-4 font-extrabold">Recommended based on your shopping trends</div>
                 <div class="flex justify-center items-stretch">
-                    <div class="p-4 text-center mx-auto">
-                        <div class="w-[158px] h-[150px] overflow-hidden">
-                            <img src="https://via.placeholder.com/158x150" alt="">
+                    <div v-for="product in $page.props.random_products" :key="product">
+                        <div class="p-4 text-center mx-auto">
+                            <div class="w-[158px] h-[150px] overflow-hidden">
+                                <img :src="product.image">
+                            </div>
+                            <div class="w-[160px] text-[12px] py-2 text-teal-600 font-extrabold hover:text-red-600 cursor-pointer">
+                                {{ product.title.substring(0, 40) }}...
+                            </div>
+                            <div class="flex justify-start">
+                            <div class="text-xs font-extrabold text-red-600 w-full text-left">{{ product.price }}</div>
                         </div>
-                        <div class="w-[160px] text-[12px] py-2 text-teal-600 font-extrabold hover:text-red-600 cursor-pointer">
-                            This is a test title
                         </div>
-                        <div class="flex justify-start">
-                        <div class="text-xs font-extrabold text-red-600 w-full text-left">$99.99</div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -258,9 +258,11 @@
                 Shop By Department
             </div>
 
-            <div class="hover:bg-gray-200 pl-6 pr-3">
-                <div class="py-2.5 text-[13px] text-black flex justify-between items-center hover:bg-gray-200 cursor-pointer">
-                    Computers <ChevronRightIcon :size="20" fillcolor="#808080" />
+            <div v-for="cat in $page.props.categories" :key="cat">
+                <div class="hover:bg-gray-200 pl-6 pr-3">
+                    <Link href="/" class="py-2.5 text-[13px] text-black flex justify-between items-center hover:bg-gray-200 cursor-pointer">
+                        {{ cat.name }} <ChevronRightIcon :size="20" fillcolor="#808080" />
+                    </Link>
                 </div>
             </div>
         </div>
