@@ -5,9 +5,12 @@
                 <Link class="text-white h-[50px] p-3 pt-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
                     Easycart
                 </Link>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-white w-6 h-6 mt-3.5 mr-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                  </svg>
             </div>
 
-            <div class="text-white h-[50px] p-3 pt-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
+            <div class="text-white h-[50px] p-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
                 <div class="flex items-center justify-center">
                     <MapMarkerOutlineIcon class="pt-2 -ml-1" fillcolor="#f5f5f5" />
                     
@@ -36,15 +39,166 @@
             </div>
 
             <div class="flex">
-                <div class="h-[50px] p-3 pt-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
+                <div class="h-[50px] p-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
                     <div class="flex items-center justify-center mt-2.5 px-1">
                         <img src="https://via.placeholder.com/35x20" alt="">
                         <div class="text-[15px] text-white -mt-2 -mr-0.5 font-extrabold">EN</div>
                         <MenuDownIcon fill="#c2c2c2" :size="20" class="text-white -mr-4 -mt-1.5 pr-1" />
                     </div>
                 </div>
+
+                <div class="h-[50px] p-3 pt-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
+                    <div class="flex items-center justify-center">
+                        <div>
+                            <div class="text-[12px] text-white font-extrabold">
+                                Hello,
+                                <span>sign in</span>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <div class="text-[15px] text-white -mt-1.5 font-extrabold">Account & List</div>
+                                <MenuDownIcon fill="#c2c2c2" :size="20" class="-mr-4 -mt-1 pr-1" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-[50px] p-3 pt-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
+                    <div class="flex items-center justify-center">
+                        <div>
+                            <div class="text-[12px] text-white font-extrabold"> Returns </div>
+                            <div class="flex items-center justify-center">
+                                <div class="text-[15px] text-white -mt-1.5 font-extrabold">& Orders</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative h-[50px] p-3 pt-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
+                        <span class="absolute text-center right-[25px] w-[14px] -top-0 rounded-full text-[22px]">
+                            <div class="text-orange-400 font-extrabold bg-gray-900 h-[20px]">0</div>
+                        </span>
+                        <div class="flex items-center justify-center">
+                        <CartMinusIcon fillcolor="#FCFCFC" :size="40" class="text-white -mt-0.5"/>
+                    </div>
+                </div>
             </div>
         </div>
+        
+        <div class="flex items-center justify-between bg-[#232f3e] h-[38px] z-40 min-w-[1150px] w-full">
+            <div class="flex">
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <MenuIcon fillcolor="#F5F5F5" :size="26" class="mr-0.5 text-white" />
+                        <div class="text-[14px] text-white font-extrabold">All</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-[14px] text-white font-extrabold">Today's Deals</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-[14px] text-white font-extrabold">Gift Cards</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-[14px] text-white font-extrabold">Buy Again</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-[14px] text-white font-extrabold">Customer Service</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-[14px] text-white font-extrabold">Sai's Easycart.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
+                    <div class="flex items-center justify-between px-2">
+                        <div class="text-[14px] text-white font-extrabold">Season Deals</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <main class="max-w-[1500px] mx-auto">
+            <div class="pt-[0px]"></div>
+            <slot />
+        </main>
+
+        <div class="w-full bg-white mt-10">
+            <div class="max-w-[1500px] mx-auto">
+                <div class="text-[23px] pt-4 font-extrabold">Recommended based on your shopping trends</div>
+                <div class="flex justify-center items-stretch">
+                    <div class="p-4 text-center mx-auto">
+                        <div class="w-[158px] h-[150px] overflow-hidden">
+                            <img src="https://via.placeholder.com/158x150" alt="">
+                        </div>
+                        <div class="w-[160px] text-[12px] py-2 text-teal-600 font-extrabold hover:text-red-600 cursor-pointer">
+                            This is a test title
+                        </div>
+                        <div class="flex justify-start">
+                        <div class="text-xs font-extrabold text-red-600 w-full text-left">$99.99</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="bg-[#232F3E]">
+            <div class="bg-[#37475A] hover:bg-gray-600 w-full p-3.5 cursor-pointer text-white font-extrabold text-center">
+                Back to top
+            </div>
+            <div class="flex items-stretch justify-between max-w-[1000px] mx-auto p-10 text-white">
+                <ul>
+                    <li class="font-extrabold text-lg">Get to Know Us</li>
+                    <li class="hover:underline cursor-pointer">Careers</li>
+                    <li class="hover:underline cursor-pointer">About Easycart</li>
+                    <li class="hover:underline cursor-pointer">Inverstor relations</li>
+                    <li class="hover:underline cursor-pointer">Easycart Devices</li>
+                    <li class="hover:underline cursor-pointer">Easycart Science</li>
+                </ul>
+
+                <ul>
+                    <li class="font-extrabold text-lg">Make Money with Us</li>
+                    <li class="hover:underline cursor-pointer">Sell products on Amazon</li>
+                    <li class="hover:underline cursor-pointer">Sell on Amazon Business</li>
+                    <li class="hover:underline cursor-pointer">Sell apps on Amazon</li>
+                    <li class="hover:underline cursor-pointer">Become an Affiliate</li>
+                    <li class="hover:underline cursor-pointer">Advertise Your Products</li>
+                    <li class="hover:underline cursor-pointer">Self-Publish wirh Us</li>
+                    <li class="hover:underline cursor-pointer">Host an Amazon Hub</li>
+                </ul>
+
+                <ul>
+                    <li class="font-extrabold text-lg">Get to Know Us</li>
+                    <li class="hover:underline cursor-pointer">Careers</li>
+                    <li class="hover:underline cursor-pointer">About Easycart</li>
+                    <li class="hover:underline cursor-pointer">Inverstor relations</li>
+                    <li class="hover:underline cursor-pointer">Easycart Devices</li>
+                    <li class="hover:underline cursor-pointer">Easycart Science</li>
+                </ul>
+
+                <ul>
+                    <li class="font-extrabold text-lg">Make Money with Us</li>
+                    <li class="hover:underline cursor-pointer">Sell products on Amazon</li>
+                    <li class="hover:underline cursor-pointer">Sell on Amazon Business</li>
+                    <li class="hover:underline cursor-pointer">Sell apps on Amazon</li>
+                    <li class="hover:underline cursor-pointer">Become an Affiliate</li>
+                    <li class="hover:underline cursor-pointer">Advertise Your Products</li>
+                    <li class="hover:underline cursor-pointer">Self-Publish wirh Us</li>
+                    <li class="hover:underline cursor-pointer">Host an Amazon Hub</li>
+                </ul>
+            </div>
+        </footer>
     </div>
 </template>
 
@@ -54,6 +208,8 @@ import { Link } from '@inertiajs/vue3';
 import MapMarkerOutlineIcon from 'vue-material-design-icons/MapMarkerOutline.vue';
 import MenuDownIcon from 'vue-material-design-icons/Menudown.vue';
 import MagnifyIcon from 'vue-material-design-icons/Magnify.vue';
+import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue'; 
+import MenuIcon from 'vue-material-design-icons/Menu.vue';
 
 const showingNavigationDropdown = ref(false);
 </script>

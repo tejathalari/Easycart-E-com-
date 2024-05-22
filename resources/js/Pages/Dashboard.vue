@@ -1,22 +1,61 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
+
+import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
 </script>
 
 <template>
     <Head title="Dashboard" />
 
     <AuthenticatedLayout>
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>
-        </template>
+        <Carousel :items-to-show="1" :wrap-around="true">
+            <Slide v-for="slide in 10" :key="slide">
+              <div class="carousel__item">
+                <img src="https://via.placeholder.com/3000x1200.png/004466?text=Testing" alt="">
+              </div>
+            </Slide>
+        
+            <template #addons>
+              <Navigation />
+            </template>
+        </Carousel>
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">You're logged in!</div>
+        <div class="relative -mt-[300px]">
+            <div class="flex m-4 z-10 relative">
+                <div class="bg-white mx-2 p-2 text-md w-full text-center">
+                    You are on Easycart.You can also shop on Easycart UK for millions of products with fast local delivery.
+                    <span class="underline text-teal-600 cursor-pointer">click hereto go to easycart.co.uk</span>
                 </div>
             </div>
         </div>
     </AuthenticatedLayout>
 </template>
+
+<style>
+.carousel__item {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__prev,
+.carousel__next {
+    width: 40px;
+    height: 200px;
+    color: rgb(196, 196, 196);
+    margin-top: -100px;
+    border: transparent
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+    width: 40px;
+    height: 200px;
+    color: rgb(212, 212, 212);
+    margin-top: -100px;
+    border: 3px solid rgb(217, 217, 217);
+}
+</style>
