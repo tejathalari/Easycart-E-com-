@@ -29,6 +29,20 @@ import 'vue3-carousel/dist/carousel.css'
                     <span class="underline text-teal-600 cursor-pointer">click hereto go to easycart.co.uk</span>
                 </div>
             </div>
+
+            <div class="grid grid-cols-3 m-4 z-10 relative">
+                <div class="p-1.5 flex">
+                    <div class="bg-white p-5">
+                        <div class="text-2xl font-extrabold flex">Computers</div>
+                        <div class="flex">
+                            <img class="object-fill" src="https://via.placeholder.com/1097x756" alt="">
+                        </div>
+                        <div class="pt-3 -mb-2 text-teal-800 font-bold hover:underline hover:text-red-400 cursor-pointer">
+                            See More
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </AuthenticatedLayout>
 </template>
