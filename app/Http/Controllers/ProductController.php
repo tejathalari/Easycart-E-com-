@@ -14,7 +14,7 @@ class ProductController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(int $id)
+    public function index(int $id)
     {
         // Find the product by ID
         $product = Product::findOrFail($id);

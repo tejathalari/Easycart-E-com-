@@ -11,18 +11,20 @@
             
 
             <div class="text-white h-[50px] p-3 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor pointer">
-                <div class="flex items-center justify-center">
-                    <MapMarkerOutlineIcon class="pt-2 -ml-1" fillcolor="#f5f5f5" />
-                    
-                    <div>
-                        <div class="text-[13px] text-gray-300 font-extrabold">
-                            <div>Delivery to sai</div>
-                        </div>
-                        <div class="text-[15px] text-white -mt-1.5 font-extrabold">
-                            <div>Brooklyn Melissa Dr</div>
+                <Link :href="route('address.index')">
+                    <div class="flex items-center justify-center">
+                        <MapMarkerOutlineIcon class="pt-2 -ml-1" fillcolor="#f5f5f5" />
+                        
+                        <div>
+                            <div class="text-[13px] text-gray-300 font-extrabold">
+                                <div>Delivery to sai</div>
+                            </div>
+                            <div class="text-[15px] text-white -mt-1.5 font-extrabold">
+                                <div>Brooklyn Melissa Dr</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
 
             <div class="flex grow items-center h-[45px] px-1">
@@ -174,7 +176,7 @@
                                 {{ product.title.substring(0, 40) }}...
                             </div>
                             <div class="flex justify-start">
-                            <div class="text-xs font-extrabold text-red-600 w-full text-left">{{ product.price }}</div>
+                            <div class="text-xs font-extrabold text-red-600 w-full text-left">${{ product.price }}</div>
                         </div>
                         </div>
                     </div>
