@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Inertia\Middleware;
 use App\Models\Category; // Correct import statement for the Category model
 use App\Models\Product; // Correct import statement for the Product model
+use App\Models\Address;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -33,7 +34,8 @@ class HandleInertiaRequests extends Middleware
     {
         return array_merge(parent::share($request), [
             'auth' => [
-                'user' => $request->user(),
+                'user' => auth()->check() ? auth()->user() : null,
+                'address' => auth()->check() ? Address::where('user_id', auth()->id())->first() : null,
             ],
             'categories' => Category::all(), // Ensure proper casing for model name
             'random_products' => Product::inRandomOrder()->limit(8)->get(),
