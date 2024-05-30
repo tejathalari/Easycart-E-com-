@@ -26,7 +26,7 @@ import 'vue3-carousel/dist/carousel.css'
             <div class="flex m-4 z-10 relative">
                 <div class="bg-white mx-2 p-2 text-md w-full text-center">
                     You are on Easycart.You can also shop on Easycart UK for millions of products with fast local delivery.
-                    <span class="underline text-teal-600 cursor-pointer">click hereto go to easycart.co.uk</span>
+                    <Link href="/" target="_blank" rel="noopener noreferrer" class="ml-2 px-4 py-2 bg-gray-700 text-white font-semibold rounded hover:bg-gray-600">Shop Now</Link>
                 </div>
             </div>
 

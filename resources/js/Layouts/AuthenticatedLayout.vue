@@ -5,7 +5,7 @@
         <div class="flex items-center bg-gray-900 h-[60px] py-2 min-w-[1150px] w-full">
             <div class="flex">
                 <Link :href="route('dashboard')" class="text-white h-[50px] p-3 pt-0.5 border-[1px] border-gray-900 rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
-                    <img width="50" height="50" src="/images/logo/Easycart.png" >
+                    <img width="40" height="40" src="/images/logo/Easycart.png" >
                 </Link>
             </div>
             
@@ -215,52 +215,58 @@
 
         </div>
 
-        <footer class="bg-[#232F3E]">
-            <div class="bg-[#37475A] hover:bg-gray-600 w-full p-3.5 cursor-pointer text-white font-extrabold text-center">
+        <footer class="bg-gray-900 text-white">
+            <div class="bg-gray-800 hover:bg-gray-700 py-3.5 text-center font-semibold cursor-pointer">
                 Back to top
             </div>
-            <div class="flex items-stretch justify-between max-w-[1000px] mx-auto p-10 text-white">
-                <ul>
-                    <li class="font-extrabold text-lg">Get to Know Us</li>
-                    <li class="hover:underline cursor-pointer">Careers</li>
-                    <li class="hover:underline cursor-pointer">About Easycart</li>
-                    <li class="hover:underline cursor-pointer">Inverstor relations</li>
-                    <li class="hover:underline cursor-pointer">Easycart Devices</li>
-                    <li class="hover:underline cursor-pointer">Easycart Science</li>
-                </ul>
-
-                <ul>
-                    <li class="font-extrabold text-lg">Make Money with Us</li>
-                    <li class="hover:underline cursor-pointer">Sell products on Amazon</li>
-                    <li class="hover:underline cursor-pointer">Sell on Amazon Business</li>
-                    <li class="hover:underline cursor-pointer">Sell apps on Amazon</li>
-                    <li class="hover:underline cursor-pointer">Become an Affiliate</li>
-                    <li class="hover:underline cursor-pointer">Advertise Your Products</li>
-                    <li class="hover:underline cursor-pointer">Self-Publish wirh Us</li>
-                    <li class="hover:underline cursor-pointer">Host an Amazon Hub</li>
-                </ul>
-
-                <ul>
-                    <li class="font-extrabold text-lg">Get to Know Us</li>
-                    <li class="hover:underline cursor-pointer">Careers</li>
-                    <li class="hover:underline cursor-pointer">About Easycart</li>
-                    <li class="hover:underline cursor-pointer">Inverstor relations</li>
-                    <li class="hover:underline cursor-pointer">Easycart Devices</li>
-                    <li class="hover:underline cursor-pointer">Easycart Science</li>
-                </ul>
-
-                <ul>
-                    <li class="font-extrabold text-lg">Make Money with Us</li>
-                    <li class="hover:underline cursor-pointer">Sell products on Amazon</li>
-                    <li class="hover:underline cursor-pointer">Sell on Amazon Business</li>
-                    <li class="hover:underline cursor-pointer">Sell apps on Amazon</li>
-                    <li class="hover:underline cursor-pointer">Become an Affiliate</li>
-                    <li class="hover:underline cursor-pointer">Advertise Your Products</li>
-                    <li class="hover:underline cursor-pointer">Self-Publish wirh Us</li>
-                    <li class="hover:underline cursor-pointer">Host an Amazon Hub</li>
-                </ul>
+            <div class="max-w-6xl mx-auto flex flex-wrap justify-between py-8 px-4">
+                <!-- Section 1 -->
+                <div class="footer-section">
+                    <h2 class="font-bold text-lg mb-4">Discover</h2>
+                    <ul>
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">Our Story</a></li>
+                        <li><a href="#" class="hover:underline">Our Team</a></li>
+                        <li><a href="#" class="hover:underline">Mission & Values</a></li>
+                        <li><a href="#" class="hover:underline">Partnerships</a></li>
+                    </ul>
+                </div>
+                <!-- Section 2 -->
+                <div class="footer-section">
+                    <h2 class="font-bold text-lg mb-4">Shop</h2>
+                    <ul>
+                        <li><a href="#" class="hover:underline">Browse Products</a></li>
+                        <li><a href="#" class="hover:underline">Special Offers</a></li>
+                        <li><a href="#" class="hover:underline">New Arrivals</a></li>
+                        <li><a href="#" class="hover:underline">Popular Items</a></li>
+                        <li><a href="#" class="hover:underline">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <!-- Section 3 -->
+                <div class="footer-section">
+                    <h2 class="font-bold text-lg mb-4">Connect</h2>
+                    <ul>
+                        <li><a href="#" class="hover:underline">Contact Us</a></li>
+                        <li><a href="#" class="hover:underline">Customer Support</a></li>
+                        <li><a href="#" class="hover:underline">FAQs</a></li>
+                        <li><a href="#" class="hover:underline">Social Media</a></li>
+                        <li><a href="#" class="hover:underline">Newsletter</a></li>
+                    </ul>
+                </div>
+                <!-- Section 4 -->
+                <div class="footer-section">
+                    <h2 class="font-bold text-lg mb-4">Legal</h2>
+                    <ul>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:underline">Returns Policy</a></li>
+                        <li><a href="#" class="hover:underline">Shipping Information</a></li>
+                        <li><a href="#" class="hover:underline">Cookie Policy</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
+        
     </div>
 
     <div 
