@@ -1,6 +1,6 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head, Inertia, useForm } from '@inertiajs/inertia-vue3';
+import { Head, Inertia, useForm } from '@inertiajs/vue3';
 import { toRefs, ref, computed, onMounted, onBeforeMount } from 'vue'
 
 import { useCartStore } from '@/store/cart'
