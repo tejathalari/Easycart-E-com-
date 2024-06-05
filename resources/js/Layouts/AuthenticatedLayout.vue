@@ -146,7 +146,7 @@
             <div class="flex">
                 <div @click="showMenu = true" class="flex h-[30px] border-[1px] border-[#232f3e] rounded-sm hover:border-[1px] hover:border-gray-100 cursor-pointer">
                     <div class="flex items-center justify-between px-2">
-                        <MenuIcon fillcolor="#F5F5F5" :size="26" class="mr-0.5 text-white" />
+                        <!-- <MenuIcon fillcolor="#F5F5F5" :size="26" class="mr-0.5 text-white" /> -->
                         <div class="text-[14px] text-white font-extrabold">All</div>
                     </div>
                 </div>
@@ -312,7 +312,7 @@
 import { ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 import MapMarkerOutlineIcon from 'vue-material-design-icons/MapMarkerOutline.vue';
-import MenuDownIcon from 'vue-material-design-icons/Menudown.vue';
+// import MenuDownIcon from 'vue-material-design-icons/Menudown.vue';
 import MagnifyIcon from 'vue-material-design-icons/Magnify.vue';
 import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue';
 import MenuIcon from 'vue-material-design-icons/Menu.vue';
