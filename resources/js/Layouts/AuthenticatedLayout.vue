@@ -314,7 +314,7 @@ import { Link } from '@inertiajs/vue3';
 import MapMarkerOutlineIcon from 'vue-material-design-icons/MapMarkerOutline.vue';
 import MenuDownIcon from 'vue-material-design-icons/Menudown.vue';
 import MagnifyIcon from 'vue-material-design-icons/Magnify.vue';
-import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue'; 
+import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue';
 import MenuIcon from 'vue-material-design-icons/Menu.vue';
 import AccountCircleIcon from 'vue-material-design-icons/AccountCircle.vue';
 import CloseIcon from 'vue-material-design-icons/Close.vue';
