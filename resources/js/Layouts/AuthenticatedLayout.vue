@@ -80,7 +80,7 @@
                                 <div class="text-sm p-0.5">Who's shopping? Select a profile.</div>
                                 <div class="flex items-center text-sm font-bold text-teal-600 hover:text-red-600 hover:underline">
                                     Manage profile
-                                    <ChevronRightIcon :size="20" fillcolor="#808080" />
+                                    <!-- <ChevronRightIcon :size="20" fillcolor="#808080" /> -->
                                 </div>
                             </div>
 
@@ -318,7 +318,7 @@ import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue';
 import MenuIcon from 'vue-material-design-icons/Menu.vue';
 import AccountCircleIcon from 'vue-material-design-icons/AccountCircle.vue';
 import CloseIcon from 'vue-material-design-icons/Close.vue';
-import ChevronRightIcon from 'vue-material-design-icons/ChevronRIght.vue';
+// import ChevronRightIcon from 'vue-material-design-icons/ChevronRIght.vue';
 
 import { useCartStore } from '@/store/cart';
 const cartStore = useCartStore()
